@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Realm</title>
+
+    <script src ="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <style>
+       body {
+
+         /*
+           background-color: rgb(19, 211, 211);
+           */
+           background-color: #2c2f33;
+           color: white;
+           font: normal 20pt Arial;
+           /*
+           background-image: url(https://media.discordapp.net/attachments/888884133743456256/889635655037095946/tumblr_lsczz9zcku1r0l5bbo1_500_large.png);
+           background-repeat: no-repeat;
+           background-size: cover;
+           background-position: center center;
+           */
+       }
+         
+       h1 {
+           color: white;
+           text-transform: uppercase;
+           font-weight: 500;
+       }
+
+       .firstdiv {
+         background-color: #7289da;
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 1024px;
+         height: 35px;
+         text-align: center;
+         color: #ffffff;
+         text-transform: uppercase;
+         font-weight: 50;
+         }
+
+/*
+       .btn1 {
+         background-color:#000;
+         color:#fff;
+         width: 150px;
+         height: 40px;
+         border: 3px white solid;
+         border-radius: 15px;
+       }
+        */
+       /*
+       .btn1:hover{
+         background-color:#fff;
+         color:#000;
+         width: 150px;
+         height: 40px;
+         border: 3px #000 solid;
+         border-radius: 15px;
+         cursor: pointer;
+       }
+*/
+/*
+       .btn2 {
+         background-color:#000;
+         color:#fff;
+         width: 150px;
+         height: 40px;
+         border: 3px white solid;
+         border-radius: 15px;
+       }
+*/
+/*
+         .btn2:hover{
+         background-color:#fff;
+         color:#000;
+         width: 150px;
+         height: 40px;
+         border: 3px #000 solid;
+         border-radius: 15px;
+         cursor: pointer;
+         }
+*/
+         .login {
+           width: 300px;
+           padding: 40px;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           background: #1a1a1a;
+           text-align: center;
+          }
+
+          .login input[type = "text"],.login input[type = "password"]{
+         border:0;
+         background: none;
+         display: block;
+         margin: 20px auto;
+         text-align: center;
+         border: 2px solid #7beaea;
+         padding: 14px 10px;
+         width: 200px;
+         outline: none;
+         color: white;
+         border-radius: 24px;
+         transition: 0.25s;
+          }
+
+          .login input[type = "text"]:focus,.login input[type = "password"]:focus{
+            width: 280px;
+          }
+
+          .login input[type = "submit"]{
+            border:0;
+         background: none;
+         display: block;
+         margin: 20px auto;
+         text-align: center;
+         border: 2px solid #ff8533;
+         padding: 14px 40px;
+         outline: none;
+         color: white;
+         border-radius: 24px;
+         transition: 0.25s;
+         cursor: pointer;
+          }
+
+          .login input[type = "submit"]:hover{
+            background: #ff8533
+          }
+    </style
+</head>
+<body>
+ <div class="firstdiv">
+RealmDevMC
+</div>
+
+<form class="login" method="post">
+<h1> Logue </h1>
+<input id="logi" type="text" name="" placeholder="name">
+<input id="logisenha" type="password" name="" placeholder="senha">
+<input type="submit" id="logiid" name="" value="Logue">
+</form>
+
+<script src ="https://www.gstatic.com/firebasejs/7.20.0/firebase.js"></script>
+
+<script>
+
+      /*
+       let fire = firebase.database().ref("a/v").once("value")
+
+       let firi = fire.val().a
+*/
+
+        var abesenha = document.getElementById("logisenha")
+
+        var abe = document.getElementById("logi")
+        
+        let loginid = document.getElementById("logiid")
+
+        loginid.onclick = function(){
+
+  $.ajax({
+
+          url: 'https://expressotesteoficiauwebfriend.algodao-docedoc.repl.co/testath',
+          method: 'post',
+  
+          data: {
+            email: abe.value,
+            senha: abesenha.value
+          },
+
+
+          success:
+          function(dados) {
+            
+            let emai = abe.value
+            
+            let senh = abesenha.value
+
+            alert("dados")
+          }
+        })
+
+        }
+      /*
+        $.ajax({
+
+          url: 'https://expressotesteoficiauwebfriend.algodao-docedoc.repl.co/testath',
+          method: 'post',
+
+          success:
+          function(dados) {
+            
+            console.log(dados)
+          }
+        })
+        */
+        /*
+    firebase.database().ref("login/email/400737010396168194").update({email: email})
+
+    firebase.database().ref("login/senha/400737010396168194").update({ senha: senha})
+    */
+    
+    </script>
+</body>
+</html>
